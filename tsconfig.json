@@ -9,6 +9,7 @@
     "allowJs": true,
     "skipDefaultLibCheck": true,
     "module": "ESNext",
+    "types": ["@types/webxr"],
     "moduleResolution": "Node",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
