@@ -2,5 +2,5 @@ node_modules
 .env
 *.env
 .next
-.lib
-.data
+lib
+data
