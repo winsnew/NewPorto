@@ -1,0 +1,30 @@
+.MainContainer {
+    position: relative;
+    overflow: hidden;
+}
+
+.MainLayout {
+    height: 100vh;
+    width: 100%;
+    background-color: $n-5;
+}
+
+.MainLoop {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    top: 8rem;
+    white-space: nowrap;
+}
+
+.CanvasContainer {
+    position: relative;
+    z-index: 20;
+    width: 100%;
+    height: 100vh;
+}
+
+.PageOne {
+    height: 100vh;
+    width: 100%;
+}

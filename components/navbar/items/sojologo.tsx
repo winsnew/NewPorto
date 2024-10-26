@@ -1,11 +1,13 @@
 import { FC, SVGProps } from "react";
+import clsx from "clsx";
+import styles from './icon.module.scss'
 
 const SojoIcons: FC<SVGProps<SVGSVGElement>> = (props) => {
     return (
         <svg
             width={40}
             height={40}
-            className="w-10 inline-block transition-transform group-hover:rotate-[90deg]"
+            className={clsx(styles.icons)}
             viewBox="120 50 200 200"
             fill="currentColor"
             {...props}

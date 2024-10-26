@@ -1,0 +1,9 @@
+.icons {
+    width: 2.5rem;
+    display: inline-block;
+    transition: transform 0.3s; 
+
+    &:hover {
+        transform: rotate(90deg);
+    }
+}

@@ -10,9 +10,11 @@ const MetaTags: FC = () => (
         <link rel="apple-touch-icon" href="" />
         <link rel="icon" type="image/png" sizes="32x32" href="" />
         <link rel="shortcut icon" href="/favicon.ico" type="" />
-        <meta property="og:site_name" content="N0T Team Dev" />
+        <meta property="og:site_name" content="Soojo Dev" />
         <meta name="og:title" content="N0t Team" />
         <meta property="og:type" content="website" />
         <title>Soojo_Dev</title>
     </Head>
 )
+
+export default MetaTags

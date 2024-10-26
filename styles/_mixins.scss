@@ -1,0 +1,87 @@
+// @mixin responsive-font($font-size, $line-height, $md-font-size: null, $md-line-height: null, $lg-font-size: null, $lg-line-height: null, $xl-font-size: null, $xl-line-height: null) {
+//     font-size: $font-size;
+//     line-height: $line-height;
+
+//     @if $md-font-size and $md-line-height {
+//         @media (min-width: 768px) {
+//             font-size: $md-font-size;
+//             line-height: $md-line-height;
+//         }
+//     }
+
+//     @if $lg-font-size and $lg-line-height {
+//         @media (min-width: 1024px) {
+//             font-size: $lg-font-size;
+//             line-height: $lg-line-height;
+//         }
+//     }
+
+//     @if $xl-font-size and $xl-line-height {
+//         @media (min-width: 1280px) {
+//             font-size: $xl-font-size;
+//             line-height: $xl-line-height;
+//         }
+//     }
+// }
+
+// Container Mixin
+@mixin container {
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 $container-padding;
+
+    @media (min-width: $breakpoint-md) {
+        padding: 0 $container-md-padding;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+        padding: 0 $container-lg-padding;
+    }
+
+    @media (min-width: $breakpoint-xl) {
+        max-width: $container-xl-max-width;
+    }
+}
+
+// Flex Center Mixin
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == sm {
+        @media (max-width: 576px) { @content; }
+    }
+    @else if $breakpoint == md {
+        @media (max-width: 768px) { @content; }
+    }
+    @else if $breakpoint == lg {
+        @media (max-width: 1024px) { @content; }
+    }
+    @else if $breakpoint == xl {
+        @media (max-width: 1280px) { @content; }
+    }
+}
+
+// Text Truncate Mixin
+@mixin text-truncate {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+// Custom Button Mixin
+@mixin custom-button {
+    font-family: $font-code;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+// Tap Highlight Mixin
+@mixin tap-highlight($color: rgba(0, 0, 0, 0)) {
+    -webkit-tap-highlight-color: $color;
+}
