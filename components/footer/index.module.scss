@@ -1,4 +1,16 @@
 .FooterContainer {
     width: 100%;
-    background-color: $n-3;
+    background-color: $n-8;
+}
+
+.Footer {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;  
+
+    p {
+        color: #fff;
+        padding: 0;
+    }
 }
