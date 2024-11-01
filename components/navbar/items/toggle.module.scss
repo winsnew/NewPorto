@@ -1,0 +1,39 @@
+.ContainerMode {
+    position: relative;
+    width: 4rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 9999px;
+    background-color: #e0f7fa;
+
+    &.dark {
+        background-color: #1a202c;
+    }
+
+    .toggle-thumb {
+        position: absolute;
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: white;
+        border-radius: 9999px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s ease;
+
+        &.dark {
+            transform: translateX(2rem);
+        }
+    }
+}
+
+.Moon {
+    color: #fff;
+    
+}
+
+.Sun {
+    margin-left: auto;
+    color: orange;
+}

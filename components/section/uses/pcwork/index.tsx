@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import gsap from "gsap";
 import * as THREE from "three";
 import { PcContainer, PcLoading } from "../container";
 
@@ -21,6 +22,7 @@ export default function Uses() {
     const geometry = new THREE.SphereGeometry(2, 32, 16);
     const material = new THREE.MeshStandardMaterial({ color: "#32a852", metalness: 0.5, roughness: 0.2 });
     const sphere = new THREE.Mesh(geometry, material);
+    sphere.scale.set(0, 0, 0)
     scene.add(sphere);
 
     // Add lights to the scene
@@ -45,6 +47,7 @@ export default function Uses() {
     };
 
     setLoading(false)
+    gsap.to(sphere.scale, {x: 1, y:1, z:1, duration:1.5, ease: "power2.out"})
     animate();
 
     // Clean up on unmount

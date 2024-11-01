@@ -7,6 +7,7 @@ import { HamburgerMenu } from "./items/header";
 import { INav } from "@/lib/interface/global";
 import clsx from "clsx";
 import styles from "./index.module.scss"
+import ThemeToggle from "./items/toggle";
 
 const Navbar: FC = () => {
     const router = useRouter()
@@ -58,6 +59,7 @@ const Navbar: FC = () => {
                             </Link>
                         ))}
                     </div>
+                    <ThemeToggle/>
                     <HamburgerMenu />
                 </nav>
 
