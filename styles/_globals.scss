@@ -1,12 +1,15 @@
 :root {
     background-color: $n-1;
     color: $n-8;
+    --text-white: $color-primary;
   
-    &.dark {
-      background-color: $n-8;
-      color: $n-1;
-    }
-  }
+}
+
+.dark {
+    background-color: $n-8;
+    color: $n-1;
+    --text-color: $n-8;
+}
 
 html, body {
     transition: background-color 0.3s ease, color 0.3s ease;

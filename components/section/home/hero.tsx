@@ -57,9 +57,9 @@ const Hero: FC = () => {
                 </div>
                 <canvas ref={canvasRef} className={clsx(styles.CanvasContainer)}></canvas>
             </div>
-            <div id="page1" className={clsx(styles.PageOne)}>
+            {/* <div id="page1" className={clsx(styles.PageOne)}>
                 
-            </div>
+            </div> */}
         </div>
     )
 }
