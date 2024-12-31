@@ -1,15 +1,19 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import { useTheme } from "@/lib/providers/theme";
 import * as THREE from "three";
 import { PcContainer, PcLoading } from "../container";
 
 export default function Uses() {
-  const mountRef = useRef<HTMLDivElement>(null);
+  const mountRef = useRef<HTMLDivElement>(null)
   const [isLoading, setLoading] = useState(true)
+  
+  const {isDarkMode} = useTheme()
 
   useEffect(() => {
     // Set up the scene, camera, and renderer
     const scene = new THREE.Scene();
+    scene.background = new THREE.Color(isDarkMode ? 0x000000 : 0xffffff);
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer();
 
@@ -53,8 +57,9 @@ export default function Uses() {
     // Clean up on unmount
     return () => {
       if (mountRef.current) mountRef.current.removeChild(renderer.domElement);
+      renderer.dispose()
     };
-  }, []);
+  }, [isDarkMode]);
 
   return (
     <PcContainer ref={mountRef}>

@@ -1,17 +1,13 @@
 import Layout from "@/components/layouts/article"
 import { FC } from "react"
-
+import WorkLayout from "@/components/section/works"
 
 interface works{}
 
 const Works: FC = () => {
     return (
         <Layout title="Works">
-            <section className="flex items-center justify-center">
-                <div className="w-full">
-                    <div>hello</div>
-                </div>
-            </section>
+            <WorkLayout/>
         </Layout>
     )
 }

@@ -1,14 +1,13 @@
 .AboutContainer {
     max-width: 100%;
+    min-height: max-content;
     margin: 0 auto;
     padding: 2rem;
 }
 
 .SectionContainer {
-    padding: 60px 0;
-    border-radius: 10px;
-    
-    .AboutHeader{
+    padding: 4rem 2rem;
+    .AboutHeader {
         font-size: 2rem;
         font-weight: 600;
         margin-bottom: 20px;
@@ -21,4 +20,54 @@
         max-width: 800px;
         margin: 0 auto;
     }
+}
+
+
+.Heading {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.AboutLayout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.Description {
+    max-width: 100%;
+    text-align: left;
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.Description strong {
+    color: #2c3e50;
+}
+
+.Description em {
+    font-style: italic;
+    color: #2980b9;
+}
+
+.ContactButton {
+    margin-top: 1.5rem;
+    padding: 0.8rem 2rem;
+    background: #2980b9;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.ContactButton:hover {
+    background: #1a6fa5;
+    transform: translateY(-3px);
 }

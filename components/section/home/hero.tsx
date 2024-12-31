@@ -5,7 +5,7 @@ import styles from "./index.module.scss"
 
 const Hero: FC = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
-    const scaleImage = (img: HTMLImageElement, ctx: CanvasRenderingContext2D, scaleImg: number = 0.7) => {
+    const scaleImage = (img: HTMLImageElement, ctx: CanvasRenderingContext2D, scaleImg: number = 0.8) => {
         const canvas = ctx.canvas
         const hRatio = canvas.width / img.width
         const vRatio = canvas.height / img.height

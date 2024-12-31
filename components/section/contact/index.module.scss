@@ -1,3 +1,131 @@
 .ContactContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.ContactHeader {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0px;
+    padding-top: 100px;
+    font: 300 60px 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
+
+.ContactWrapper {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    max-width: 840px;
+}
+
+.InputStyle {
+    width: 400px;
+}
+
+#ContactForm {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    gap: 10px;
+
+    .FormHorisontal {
+        /*float: left;*/
+        font-family: 'Lato';
+        font-weight: 400;
+    }
+
+    .FormControl {
+        display: flex;
+        max-width: 100%;
+        letter-spacing: 1px;
+
+        .FormInput {
+            width: 100%;
+            height: 30px;
+            background-color: transparent;
+        }
+    }
+
+    .FormTextarea {
+        height: 200px;
+        background-color: transparent;
+    }
+
+    .SendButton {
+        margin-top: 15px;
+        height: 34px;
+        width: 400px;
+        overflow: hidden;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .AltSendButton {
+        width: 400px;
+        height: 34px;
+        transition: all .2s ease-in-out;
+    }
+
+    .SendText {
+        display: block;
+        margin-top: 10px;
+        font: 700 12px 'Lato', sans-serif;
+        letter-spacing: 2px;
+    }
+}
+
+.DirectContainer {
+    max-width: 400px;
+
+    .ContactList {
+        list-style-type: none;
+        margin-left: -30px;
+        padding-right: 20px;
+
+        .ListItem {
+            line-height: 4;
+            color: #aaa;
+
+            .ContactText {
+                font: 300 18px 'Lato', sans-serif;
+                letter-spacing: 1.9px;
+                color: #bbb;
+            }
+        }
+
+    }
+
+
+    .ContactText a {
+        color: #bbb;
+        text-decoration: none;
+        transition-duration: 0.2s;
+    }
+
+    .SocialMedia {
+        position: relative;
+        font-size: 22px;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .SocialMedia li {
+        position: relative;
+        display: inline-block;
+        height: 60px;
+        width: 60px;
+        margin: 10px 3px;
+        line-height: 60px;
+        border-radius: 50%;
+        color: #fff;
+        background-color: rgb(27, 27, 27);
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+    }
 }
